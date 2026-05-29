@@ -147,28 +147,6 @@
         </svg>
       </div>
 
-      <div class="notes-grid">
-        <div id="note1" class="note-card active">
-          <strong>1. Define the task</strong>
-          The command and current observation are used to identify the intended manipulation target and desired object-state change.
-        </div>
-        <div id="note2" class="note-card">
-          <strong>2. Build a short future</strong>
-          A short-horizon future signal describes how the relevant object or articulated part should evolve.
-        </div>
-        <div id="note3" class="note-card">
-          <strong>3. Compress the future</strong>
-          The future video is encoded, pooled into temporal bins, and projected into a compact future-conditioning vector.
-        </div>
-        <div id="note4" class="note-card">
-          <strong>4. Reliability-aware mixing</strong>
-          RAFC compares the null future with shifted future candidates and gates how much the policy should trust the future signal.
-        </div>
-        <div id="note5" class="note-card">
-          <strong>5. Use it in closed loop</strong>
-          The policy uses recent observations and the reliable future latent to generate actions during closed-loop execution.
-        </div>
-      </div>
     </div>
 
     <!-- Results Table -->
