@@ -1,194 +1,200 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<meta charset="utf-8">
-<title>Grounding Language Models with Semantic Digital Twins for Robotic Planning</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        Grounding Language Models with Semantic Digital Twins for Robotic Planning
+    </title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>Grounding Language Models with Semantic Digital
-Twins for Robotic Planning</h1>
+    <h1>
+        Grounding Language Models with Semantic Digital Twins for Robotic Planning
+    </h1>
 
-<p class="authors">
-Mehreen Naeem, Andrew Melnik, Michael Beetz
-</p>
-
-<p class="affiliation">
-Institute for Artificial Intelligence, University of Bremen
-</p>
-
-<div class="buttons">
-<a href="paper/Grounding LM with SDT for Robotic Planning.pdf">📄 Paper</a>
-<a href="https://github.com/MehreenNaeem/Grounding-Language-Models-with-Semantic-Digital-Twins-for-Robotic-Planning.git">💻 Code</a>
-<a href="https://github.com/askforalfred/alfred">📊 Dataset</a>
-</div>
-
-<img class="teaser" src="images/method.jpg">
-<div class="abstract">
-    <h2>Abstract</h2> 
-    <p class="center-text">
-    We introduce a novel framework that integrates
-    Semantic Digital Twins (SDTs) with Large Language Models
-    (LLMs) to enable adaptive and goal-driven robotic task execution in dynamic environments. The system decomposes natural
-    language instructions into structured action triplets, which are
-    grounded in contextual environmental data provided by the SDT.
-    This semantic grounding allows the robot to interpret object
-    affordances and interaction rules, enabling action planning and
-    real-time adaptability. In case of execution failures, the LLM
-    utilizes error feedback and SDT insights to generate recovery
-    strategies and iteratively revise the action plan. We evaluate our
-    approach using tasks from the ALFRED benchmark, demonstrating robust performance across various household scenarios. The
-    proposed framework effectively combines high-level reasoning
-    with semantic environment understanding, achieving reliable task
-    completion in the face of uncertainty and failure.
+    <p class="authors">
+        Mehreen Naeem, Andrew Melnik, Michael Beetz
     </p>
-</div>
 
-<div class="center-content">
-  <h2>Experimental Result </h2>
-  <table class="paper-table">
-    <thead>
-      <tr>
-        <th rowspan="2">LLM</th>
-        <th rowspan="2">Without SDT</th>
-        <th colspan="3">SDT</th>
-      </tr>
-      <tr>
-        <th><i>Deepseek</i></th>
-        <th><i>Llama‑3.3</i></th>
-        <th><i>GPT‑oss</i></th>
-      </tr>
-    </thead>
+    <p class="affiliation">
+        Institute for Artificial Intelligence, University of Bremen
+    </p>
 
-    <tbody>
-      <tr>
-        <td><b>Avg. failure itr. ↓</b></td>
-        <td>17.14</td>
-        <td>1.14</td>
-        <td>2.5</td>
-        <td>1.28</td>
-      </tr>
-      <tr>
-        <td><b>Avg. re‑planning itr. ↓</b></td>
-        <td>1.57</td>
-        <td>0.28</td>
-        <td>0.4</td>
-        <td>0.2</td>
-      </tr>
-      <tr>
-        <td><b>Success rate ↑</b></td>
-        <td>57%</td>
-        <td>100%</td>
-        <td>92.86%</td>
-        <td>100%</td>
-      </tr>
-    </tbody>
-  </table>
+    <div class="buttons">
+        <a href="paper/Grounding LM with SDT for Robotic Planning.pdf">
+            📄 Paper
+        </a>
 
-  <p class="caption"><b>Table:</b> Comparison of performance with and without SDT.</p>
-   
-</div>
+        <a href="https://github.com/MehreenNaeem/Grounding-Language-Models-with-Semantic-Digital-Twins-for-Robotic-Planning">
+            💻 Code
+        </a>
 
-
-    <!-- Row 1 -->
-<div class="video-row">
-    <div class="video-box">
-        <video autoplay muted loop controls>
-            <source src="videos/output_no_SDT.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <a href="https://github.com/askforalfred/alfred">
+            📊 Dataset
+        </a>
     </div>
 
-    <div class="video-box">
-        <video autoplay muted loop controls>
-            <source src="videos/output_no_SDT_down.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- Teaser Image -->
+    <img class="teaser" src="images/method.jpg" alt="Method Overview">
+
+    <!-- Abstract -->
+    <div class="abstract">
+
+        <h2>Abstract</h2>
+
+        <p class="center-text">
+            We introduce a novel framework that integrates Semantic Digital Twins (SDTs)
+            with Large Language Models (LLMs) to enable adaptive and goal-driven robotic
+            task execution in dynamic environments. The system decomposes natural language
+            instructions into structured action triplets, which are grounded in contextual
+            environmental data provided by the SDT. This semantic grounding allows the robot
+            to interpret object affordances and interaction rules, enabling action planning
+            and real-time adaptability.
+
+            In case of execution failures, the LLM utilizes error feedback and SDT insights
+            to generate recovery strategies and iteratively revise the action plan. We evaluate
+            our approach using tasks from the ALFRED benchmark, demonstrating robust performance
+            across various household scenarios.
+
+            The proposed framework effectively combines high-level reasoning with semantic
+            environment understanding, achieving reliable task completion in the face of
+            uncertainty and failure.
+        </p>
+
     </div>
-</div>
 
-<div class="caption">
-    Caption for Video 1A and Video 1B
-</div>
+    <!-- Results Table -->
+    <div class="center-content">
 
+        <h2>Experimental Results</h2>
 
-    <!-- Row 2 -->
-<div class="video-row">
-    <div class="video-box">
-        <video autoplay muted loop controls>
-            <source src="videos/output_PCo_SDT.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <table class="paper-table">
+
+            <thead>
+                <tr>
+                    <th rowspan="2">LLM</th>
+                    <th rowspan="2">Without SDT</th>
+                    <th colspan="3">SDT</th>
+                </tr>
+
+                <tr>
+                    <th><i>DeepSeek</i></th>
+                    <th><i>Llama-3.3</i></th>
+                    <th><i>GPT-oss</i></th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td><b>Avg. failure itr. ↓</b></td>
+                    <td>17.14</td>
+                    <td>1.14</td>
+                    <td>2.5</td>
+                    <td>1.28</td>
+                </tr>
+
+                <tr>
+                    <td><b>Avg. re-planning itr. ↓</b></td>
+                    <td>1.57</td>
+                    <td>0.28</td>
+                    <td>0.4</td>
+                    <td>0.2</td>
+                </tr>
+
+                <tr>
+                    <td><b>Success rate ↑</b></td>
+                    <td>57%</td>
+                    <td>100%</td>
+                    <td>92.86%</td>
+                    <td>100%</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <p class="caption">
+            <b>Table:</b> Comparison of performance with and without SDT.
+        </p>
+
     </div>
 
-    <div class="video-box">
-        <video autoplay muted loop controls>
-            <source src="videos/output_PCo_SDT_down.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+
+    <!-- ================= VIDEO ROW 1 ================= -->
+
+    <div class="video-row">
+
+        <div class="video-box">
+            <video controls autoplay muted loop playsinline>
+                <source src="./videos/output_no_SDT.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="video-box">
+            <video controls autoplay muted loop playsinline>
+                <source src="./videos/output_no_SDT_down.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
     </div>
-</div>
 
-<div class="caption">
-    Caption for Video 2A and Video 2B
-</div>
-
-```
+    <div class="vidcaption">
+        Task execution without SDT grounding.
+    </div>
 
 
-<!--
-<h2>Method Overview</h2>
+    <!-- ================= VIDEO ROW 2 ================= -->
 
-<p>
-Explain your pipeline or architecture here.
-</p>
+    <div class="video-row">
 
-<img class="result" src="images/teaser.png">
+        <div class="video-box">
+            <video controls autoplay muted loop playsinline>
+                <source src="./videos/output_PCo_SDT.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
-<h2>Video Demo</h2>
+        <div class="video-box">
+            <video controls autoplay muted loop playsinline>
+                <source src="./videos/output_PCo_SDT_down.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
-<video controls width="800">
-<source src="videos/demo.mp4" type="video/mp4">
-</video>
+    </div>
 
-<h2>Results</h2>
+    <div class="vidcaption">
+        Task execution with Semantic Digital Twin grounding.
+    </div>
 
-<table>
-<tr>
-<th>Method</th>
-<th>Success Rate</th>
-</tr>
 
-<tr>
-<td>Baseline</td>
-<td>40%</td>
-</tr>
+    <!-- Citation -->
 
-<tr>
-<td>Ours</td>
-<td>67%</td>
-</tr>
+    <h2>Citation</h2>
 
-</table>
--->
-<h2>Citation</h2>
-
-<pre>
+    <pre>
 @inproceedings{myproject2026,
-title={Grounding Language Models with Semantic Digital
-Twins for Robotic Planning},
-author={Mehreen Naeem1 , Andrew Melnik , Michael Beetz},
-booktitle={ICRA 26}
+title={Grounding Language Models with Semantic Digital Twins for Robotic Planning},
+author={Mehreen Naeem, Andrew Melnik, Michael Beetz},
+booktitle={ICRA 2026},
 year={2026}
 }
-</pre>
+    </pre>
 
 </div>
 
 </body>
 </html>
+```
